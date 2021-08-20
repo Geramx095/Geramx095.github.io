@@ -1,7 +1,90 @@
-<h1>Ow te quiero mucho GRECIA ORIANA :3</h1>
-<p>
-    <img src="https://by3302files.storage.live.com/y4pj3y-etoj8PkR3_CPMO2KWwCalpeIP8wjWmaIfdodX9OQzj0sXaDJqskAxexMhXlqNGp8ipvpOzYc6V8-yu_yfd_XfDIpHFDnmqZnCnGSSYo7Yz_g7ThO62lSGnfcr82CUIekDWa7IG0yN72lLQdEFgt8sky1-DK89TyO1aTuM6Haf3yO2mdbvMuwgsfksy99rNQCHus2x7dKi1ghrE1m08gCPAvDvggybEylvfakhzc/B612_20210422_144844_396.jpg?psid=1&width=624&height=831" alt="">
-</p>
-<p>Y fue creado con amor para Grecia xD =D Te quiero</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=sec, initial-scale=1.0">
+    <title>Carrousel</title>
+</head>
+<style>
+body{
+        margin: 0px;
+    }
+    /*1.- Width del 100% para que abarque toda la pantalla.
+      2.- Con overflow establecemos la propiedad de scroll
+      3.- padding del 30% para tener un margen de vista
+      4.- Pos:Relative porque queremos que los elementos que hereden se ajusten con base en este elemento*/
 
 
+    .carousel{
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative;
+    }
+    /* 1.- WhiteSpace nowrap Enlista todos los elementos en un solo renglón.
+       2.- Establecemmos un pequeño espaciado entre los elementos de la lista.
+       3.- Padding de 10px para evitar que se nos corte el elemento cuando hagamos hover
+       4.-
+       5.-*/
+
+    .carousel__container{
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+
+    }
+    /* 1-3 Color, altura, anchura.
+       4.- Qué tan curvo queremos nuestro borde
+       5.- Overflow: Hidden Para que tome los estilos
+       6.- Margin 10px separación entre elementos
+       7.-InLineBlock: Un item al lado del otro
+       8.-Cambia el icono del mouse cuando selecciona el elemento
+       9.-Suaviza la transcisión para que se vea agradable
+       10.- Ajusta los elementos para que no se salgan y empiecen de izq a derecha
+
+    */
+    
+
+    .carousel-item{
+    background-color: #0096c7;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+  }
+  .carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+  }
+  .carousel__container:hover .carousel-item {
+    opacity: 0.3;
+  }
+  .carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+</style>
+<body>
+    <section class="carousel">
+      <div class="carousel__container">
+        <div class="carousel-item">
+        <img class="carousel-item__img" src="https://by3302files.storage.live.com/y4pj3y-etoj8PkR3_CPMO2KWwCalpeIP8wjWmaIfdodX9OQzj0sXaDJqskAxexMhXlqNGp8ipvpOzYc6V8-yu_yfd_XfDIpHFDnmqZnCnGSSYo7Yz_g7ThO62lSGnfcr82CUIekDWa7IG0yN72lLQdEFgt8sky1-DK89TyO1aTuM6Haf3yO2mdbvMuwgsfksy99rNQCHus2x7dKi1ghrE1m08gCPAvDvggybEylvfakhzc/B612_20210422_144844_396.jpg?psid=1&width=624&height=831" alt="images Carrousel">
+        </div>        
+        <div class="carousel-item__details">
+          <div>
+            <img src="" alt="">
+            <img src="" alt="">
+          </div>         
+        </div>
+        <p class="carousel-item__details--title">Titulo Descriptivo</p>
+        <p class="carousel-item__details--subtitle"></p>
+        <div class="carousel-item"></div>
+      </div>
+    </section>
+</body>
+</html>
